@@ -8,7 +8,7 @@ export default function App() {
 
       <SafeAreaView className="flex-1 items-center justify-center">
         <Text className="text-3xl text-green-500">App</Text>
-        <Link href={"/profile"}> Go to Profile </Link>
+        <Link href={"/home"}> Go to Home </Link>
       </SafeAreaView>
     </View>
   );
