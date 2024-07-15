@@ -1,12 +1,22 @@
 import { Tabs } from "expo-router";
-import { Image, Text, View } from "react-native";
+import { Image, Platform, Text, View } from "react-native";
 import { icons } from "../../constants";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
     <View className="items-center justify-center gap-2">
-      <Image source={icon} resizeMode="contain" tintColor={color} className="w-6 h-6" />
-      <Text className={`${focused ? "font-semibold" : "font-normal"} text-xs capitalize`} style={{ color: color }}>
+      <Image
+        source={icon}
+        resizeMode="contain"
+        tintColor={color}
+        className="w-4 h-4"
+      />
+      <Text
+        className={`${
+          focused ? "font-semibold" : "font-normal"
+        } text-xs capitalize`}
+        style={{ color: color }}
+      >
         {name}
       </Text>
     </View>
@@ -19,13 +29,13 @@ const TabsLayout = () => {
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarActiveTintColor: "#ffa001",
+          tabBarActiveTintColor: "#84cc16",
           tabBarInactiveTintColor: "#cdcde0",
           tabBarStyle: {
             backgroundColor: "#161622",
             borderTopWidth: 1,
             borderTopColor: "#232533",
-            height: 84,
+            height: Platform.OS === "ios" ? 84 : 72,
           },
         }}
       >
@@ -35,7 +45,12 @@ const TabsLayout = () => {
             title: "Home",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.home} color={color} name="home" focused={focused} />
+              <TabIcon
+                icon={icons.home}
+                color={color}
+                name="home"
+                focused={focused}
+              />
             ),
           }}
         />
@@ -45,7 +60,12 @@ const TabsLayout = () => {
             title: "Bookmark",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.bookmark} color={color} name="bookmark" focused={focused} />
+              <TabIcon
+                icon={icons.bookmark}
+                color={color}
+                name="bookmark"
+                focused={focused}
+              />
             ),
           }}
         />
@@ -55,7 +75,12 @@ const TabsLayout = () => {
             title: "Create",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.plus} color={color} name="create" focused={focused} />
+              <TabIcon
+                icon={icons.plus}
+                color={color}
+                name="create"
+                focused={focused}
+              />
             ),
           }}
         />
@@ -65,7 +90,12 @@ const TabsLayout = () => {
             title: "Profile",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
-              <TabIcon icon={icons.profile} color={color} name="profile" focused={focused} />
+              <TabIcon
+                icon={icons.profile}
+                color={color}
+                name="profile"
+                focused={focused}
+              />
             ),
           }}
         />
