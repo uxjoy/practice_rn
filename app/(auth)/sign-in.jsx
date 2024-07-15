@@ -6,9 +6,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../../components/CustomButton";
 import FormField from "../../components/FormField";
 
+import { createUser } from "../../lib/appwrite";
+
 const SignIn = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const submitHander = () => {
+    createUser(form.email, form.password);
+  };
 
   return (
     <SafeAreaView className="bg-slate-900 h-full">
@@ -52,7 +58,7 @@ const SignIn = () => {
 
               <CustomButton
                 title={"Sign In"}
-                handlePress={() => {}}
+                handlePress={submitHander}
                 isLoading={isSubmitting}
                 containerStyle={"rounded-xl h-14 mt-8"}
               />

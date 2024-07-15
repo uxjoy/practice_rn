@@ -6,10 +6,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../../components/CustomButton";
 import FormField from "../../components/FormField";
 
+import { createUser } from "../../lib/appwrite";
+
 const SignUp = () => {
   const [form, setForm] = useState({ username: "", email: "", password: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const submitHander = () => {
+    createUser();
+    // createUser(form.username, form.email, form.password);
+  };
   return (
     <SafeAreaView className="bg-slate-900 h-full">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
@@ -61,7 +67,7 @@ const SignUp = () => {
 
               <CustomButton
                 title={"Sign Up"}
-                handlePress={() => {}}
+                handlePress={submitHander}
                 isLoading={isSubmitting}
                 containerStyle={"rounded-xl h-14 mt-8"}
               />
