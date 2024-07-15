@@ -8,8 +8,6 @@ export default function App() {
   return (
     <>
       <SafeAreaView className="bg-slate-900">
-        <StatusBar barStyle="auto" />
-
         <ScrollView contentContainerStyle={{ height: "100%" }} className="py-8">
           <View className="w-full h-full items-center justify-between px-5">
             {/* <Image
@@ -61,6 +59,8 @@ export default function App() {
             />
           </View>
         </ScrollView>
+
+        <StatusBar barStyle="auto" />
       </SafeAreaView>
     </>
   );
