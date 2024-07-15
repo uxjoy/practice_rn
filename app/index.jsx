@@ -30,10 +30,15 @@ export default function App() {
               />
 
               <View className="relative space-y-2">
-                <Text className="text-3xl text-white font-bold text-center capitalize">
-                  Discover endless possibilites{" "}
-                  <Text className="text-lime-500">App Design</Text>
-                </Text>
+                <View>
+                  <Text className="text-3xl text-white font-bold text-center capitalize">
+                    Discover endles
+                  </Text>
+                  <Text className="text-3xl text-white font-bold text-center capitalize">
+                    possibilites{" "}
+                    <Text className="text-lime-500">App Design</Text>
+                  </Text>
+                </View>
 
                 {/* <Image
                   source={images.path}
@@ -42,9 +47,9 @@ export default function App() {
                   tintColor="#84cc16"
                 /> */}
 
-                <Text className="text-slate-200 text-center text-sm leading-normal">
+                <Text className="text-slate-200 text-center text-lg font-light">
                   Where creativity meets innovation: embark on a journey of
-                  limitless exploration with "Brand Name"
+                  limitless exploration with JOY
                 </Text>
               </View>
             </View>

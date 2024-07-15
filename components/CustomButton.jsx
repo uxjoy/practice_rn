@@ -17,7 +17,7 @@ const CustomButton = ({
       activeOpacity={0.7}
       disabled={isLoading}
     >
-      <Text className={`text-slate-900 font-semibold ${textStyle}`}>
+      <Text className={`text-slate-900 text-lg font-semibold ${textStyle}`}>
         {title || "Button"}
       </Text>
     </TouchableOpacity>
