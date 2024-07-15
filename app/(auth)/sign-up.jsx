@@ -63,7 +63,7 @@ const SignUp = () => {
                 title={"Sign Up"}
                 handlePress={() => {}}
                 isLoading={isSubmitting}
-                containerStyle={" h-14 mt-8"}
+                containerStyle={"rounded-xl h-14 mt-8"}
               />
             </View>
 
