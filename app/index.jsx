@@ -47,7 +47,7 @@ export default function App() {
                   tintColor="#84cc16"
                 /> */}
 
-                <Text className="text-slate-200 text-center text-lg font-light">
+                <Text className="text-slate-200 text-center text-lg font-light leading-6">
                   Where creativity meets innovation: embark on a journey of
                   limitless exploration with JOY
                 </Text>
